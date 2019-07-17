@@ -4,8 +4,8 @@ import useSocket from 'use-socket.io-client';
 import { useImmer } from 'use-immer';
 import { useOnlineStatus, useWindowSize } from '@withvoid/melting-pot';
 import useClippy from 'use-clippy';
-
 import './index.css';
+
 
 const Messages = props => { 
   const [ clipboard, setClipboard ] = useClippy();
@@ -103,9 +103,9 @@ const Chat = props => {
   return id !== '' ? (
     <section className="chatSection" style={{display:'flex',flexDirection:'row'}} >
       <ul id="messages"><Messages data={messages} /></ul>
-      <ul id="online"> <a onClick={()=>logOut()} href='#'><div style={{float:'right'}}>❌</div></a> {online ? '❤️ You are Online' : '💛 You are Offline'} <hr/><Online data={onlineList} /> </ul>
+      <ul id="online"> <a onClick={()=>logOut()} href='#'><div style={{float:'right'}}>❌</div></a> {online  ? 'You are Online' : 'You are Offline'} <hr/><Online data={onlineList} /> </ul>
       <div id="sendform">
-        <form className="inputBar" onSubmit={e => handleSend(e)} style={{display: 'flex'}}>
+        <form className="inputBar" onSubmit={e => handleSend(e)} style={{display: 'flex', paddingTop: '30px'}}>
             <input id="m" />
             {width > 1000 ? <button style={{width:'100px'}} type="submit">Send Message</button> :
           <button style={{width:'50px'}}><i style={{fontSize:'15px'}} class="material-icons">send</i></button>}
