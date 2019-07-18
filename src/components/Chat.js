@@ -103,7 +103,7 @@ const Chat = props => {
   return id !== '' ? (
     <section className="chatSection" style={{display:'flex',flexDirection:'row'}} >
       <ul id="messages"><Messages data={messages} /></ul>
-      <ul id="online"> <a onClick={()=>logOut()} href='#'><div style={{float:'right'}}>❌</div></a> {online  ? 'You are Online' : 'You are Offline'} <hr/><Online data={onlineList} /> </ul>
+      <ul id="online"> <a onClick={()=>logOut()} href='#'><div style={{float:'right'}}></div></a> {online  ? 'You are Online' : 'You are Offline'} <hr/><Online data={onlineList} /> </ul>
       <div id="sendform">
         <form className="inputBar" onSubmit={e => handleSend(e)} style={{display: 'flex', paddingTop: '30px'}}>
             <input id="m" />
