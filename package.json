@@ -49,6 +49,6 @@
   ],
   "devDependencies": {
     "gh-pages": "^2.0.1",
-    "jquery": "^1.12.4"
+    "jquery": "^3.4.0"
   }
 }
